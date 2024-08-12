@@ -1,0 +1,30 @@
+package exercícioError;
+
+import java.util.Scanner;
+
+public class principal {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try {
+			System.out.println("Enter account data: ");
+			System.out.println("Account Number: ");
+			Integer number = sc.nextInt();
+			System.out.println("Holder :");
+			String holder = sc.next();
+			System.out.println("Enter the initial balance: ");
+			Double initialBalance = sc.nextDouble();
+			System.out.println("Enter the withdraw limit: ");
+			Double withdrawlimit = sc.nextDouble();
+			
+			Account acc = new Account(number, holder,initialBalance, withdrawlimit);
+			
+			
+		}
+		catch(Exception e) {
+			
+		}
+
+	}
+
+}
