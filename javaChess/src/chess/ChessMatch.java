@@ -27,6 +27,7 @@ public class ChessMatch {
 		board.placePieces(piece, new ChessPosition(column, row).toPosition());
 	}
 	
+<<<<<<< HEAD
 
 	private void initialSetup() {
 		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
@@ -45,3 +46,12 @@ public class ChessMatch {
 	}
 }
 
+=======
+	private void initialSetup() {
+		placeNewPiece('b', 6, new King(board, Color.BLACK));
+		
+
+	}
+
+}
+>>>>>>> 349208ba3fce91b733b1ee932a6d6e9fe4152c7b
