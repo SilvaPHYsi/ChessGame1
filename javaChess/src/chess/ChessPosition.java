@@ -3,28 +3,27 @@ package chess;
 import boardGame.Position;
 
 public class ChessPosition {
+	
 	private char column;
 	private int row;
 	
-	public ChessPosition(char column, int row ) {
-		if( row < 1 || row > 8  || column < 'a' || column > 'h') {
-			throw new ChessException("Algo deu errado, veja se inseriu linhas maiores que 1 e menores 8, verifique se escolheu colunas de 'a' até 'h' ");
+	public ChessPosition(char column, int row) {
+		if (column < 'a' || column > 'h' || row < 1 || row > 8) {
+			throw new ChessException("Error instanciando a posição no tabuleiro, os valores devem estar entre a1 e h8");
 		}
 		this.column = column;
 		this.row = row;
 	}
-	
-	
+
 	public char getColumn() {
 		return column;
 	}
 
-	
 	public int getRow() {
 		return row;
 	}
-	
-	protected  Position toPosition() {
+
+	protected Position toPosition() {
 		return new Position(8 - row, column - 'a');
 	}
 	
@@ -36,8 +35,6 @@ public class ChessPosition {
 	public String toString() {
 		return "" + column + row;
 	}
-
-	
-	
-
 }
+
+
